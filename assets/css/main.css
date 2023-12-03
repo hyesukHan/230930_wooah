@@ -424,7 +424,28 @@
     .sc-green .content{
         padding: 0 24px;
     }
-
+    .sc-green .bg{
+        position: fixed; 
+        background: url(../images/sc-green/bg-season.jpg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;            
+        background-position: center center; 
+        z-index: -1;
+        background-size: cover;
+    }
+    .sc-green .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
     .sc-news .group-news .news-list .news-item .text-area .title{
         font-size: 16px;
     }
