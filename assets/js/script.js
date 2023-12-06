@@ -1,3 +1,5 @@
+//스크롤을 내리면 header 숨김
+
 lastScroll = 0;
 $(window).scroll(function(){ 
   curr = $(this).scrollTop();
@@ -11,6 +13,7 @@ $(window).scroll(function(){
   lastScroll = curr;
 })
 
+// gnb header와 sub영역 컨트롤
 
 $('.header .gnb .gnb-list > li').hover(function(){
   if($(this).find('.sub').length){
@@ -53,6 +56,8 @@ var swiper1 = new Swiper(".sc-visual .swiper", {
     spaceBetween: 16,
 });
 
+//sc-story swiper에 마우스 올리면 슬라이드 스탑
+
 $('.sc-story .swiper').on('mouseover', function(){
   swiper2.autoplay.stop();
 });
@@ -60,6 +65,7 @@ $('.sc-story .swiper').on('mouseout', function(){
   swiper2.autoplay.start();
 });
 
+//sc-font 무한롤링 배너
 var swiper3 = new Swiper(".sc-fonts .swiper", {
   autoplay: {
     delay: 0,
@@ -71,6 +77,8 @@ var swiper3 = new Swiper(".sc-fonts .swiper", {
   slidesPerView: 'auto',
 });
 
+// sc-vision video 컨트롤 
+
 $('.sc-vision .btn-control').click(function(){
   if($(this).hasClass('on')){
     $('.sc-vision video').get(0).currentTime = 0;
@@ -80,6 +88,8 @@ $('.sc-vision .btn-control').click(function(){
   }
   $('.sc-vision .btn-control').toggleClass('on');
 })
+
+// footer sitebox 컨트롤
 $('.footer .group-related-site .site-box').click(function(){
   $('.footer .group-related-site .site-list').toggleClass('on');
 })
